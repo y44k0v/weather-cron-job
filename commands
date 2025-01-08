@@ -19,3 +19,10 @@ date -u
 # create cron job
 crontab -e
 0 8 * * * .../weather_cron_job/rx_poc.sh
+
+# historical accuracy report
+echo -e "year\tmonth\tday\tobs_temp\tfc_temp\taccuracy\taccuracy_range" > historical_fc_accuracy.tsv
+# script
+touch fc_accuracy.sh
+chmod u+x fc_accuracy.sh
+echo '#!/bin/bash' > fc_accuracy.sh
