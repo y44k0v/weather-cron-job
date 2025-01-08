@@ -6,3 +6,9 @@ echo $header > rx_poc.log
 # script
 touch rx_poc.sh
 chmod u+x rx_poc.sh
+echo '#!/bin/bash' > rx_poc.sh
+# location
+city_name="thornhill"
+echo $city_name >> rx_poc.sh
+# weather data
+curl wttr.in/$city_name --output weather_report
