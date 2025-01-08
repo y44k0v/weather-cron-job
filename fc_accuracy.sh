@@ -22,3 +22,10 @@ else
 fi
 
 echo "Forecast accuracy is $accuracy_range"
+
+# append record historical accuracy file
+row=$(tail -1 rx_poc.log)
+year=$( echo $row | cut -d " " -f1)
+month=$( echo $row | cut -d " " -f2)
+day=$( echo $row | cut -d " " -f3)
+echo -e "$year\t$month\t$day\t$today_temp\t$yesterday_fc\t$accuracy\t$accuracy_range" >> historical_fc_accuracy.tsv
