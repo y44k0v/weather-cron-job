@@ -11,4 +11,11 @@ echo '#!/bin/bash' > rx_poc.sh
 city_name="thornhill"
 echo $city_name >> rx_poc.sh
 # weather data
-curl wttr.in/$city_name --output weather_report
+curl -s wttr.in/$city_name?T --output weather_report 
+
+# check date format
+date -u
+
+# create cron job
+crontab -e
+0 8 * * * .../weather_cron_job/rx_poc.sh
