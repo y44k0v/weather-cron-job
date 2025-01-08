@@ -1,0 +1,8 @@
+# log file
+touch rx_poc.log
+# header
+header=$(echo -e "year\tmonth\tday\tob_temp\tfc_temp")
+echo $header > rx_poc.log
+# script
+touch rx_poc.sh
+chmod u+x rx_poc.sh
