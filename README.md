@@ -1,1 +1,1 @@
-## Bash scripts to fetch weather data and keep historical of forecastrecord
+## Bash scripts to fetch weather data and keep historical forecast accuracy record
